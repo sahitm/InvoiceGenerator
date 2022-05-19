@@ -18,15 +18,18 @@
 
     <section id="rectangleBottom">
         <section id="btn-group">
-            <button class="btn">Wash Car: $10</button>
-            <button class="btn">Mow Lawn: $20</button>
-            <button class="btn">Pull Weeds: $30</button>
+            <button class="btn" id="washCarBtn" onclick="addButtonElements('Wash Car','10','washCarBtn')">Wash Car: $10</button>
+            <button class="btn" id="mowLawnBtn" onclick="addButtonElements('Mow Lawn','20','mowLawnBtn')">Mow Lawn: $20</button>
+            <button class="btn" id="pullWeedsBtn" onclick="addButtonElements('Pull Weeds','30','pullWeedsBtn')">Pull Weeds: $30</button>
           </section>
       
           <section id="invoiceHead">
             <div>Task</div>
             <div>Total</div>
           </section>
+
+          <div id="invoiceText">
+          </div>
       
           <hr>
       
@@ -37,7 +40,7 @@
             </div>
             <div id="billamount">
               <div>Total Amount</div>
-              <h1>$0</h1>
+              <h1 id="amount">$0</h1>
             </div>
           </section>
       
