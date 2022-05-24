@@ -1,56 +1,91 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Invoice Generator</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Generator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  
-  <div class="containerBox">
-    <section id="rectangle">
-      <h1 id="heading">Invoive Creator</h1>
-      <p id="caption">Thanks for choosing GoodCorp, LLC!</p>
-    </section>
+    <div class="containerBox">
+        <section id="rectangle">
+            <h1 id="heading">Invoive Creator</h1>
+            <p id="caption">Thanks for choosing GoodCorp, LLC!        </p>
+        </section>
 
-    <section id="rectangleBottom">
-        <section id="btn-group">
-            <button class="btn" id="washCarBtn" onclick="addButtonElements('Wash Car','10','washCarBtn')">Wash Car: $10</button>
-            <button class="btn" id="mowLawnBtn" onclick="addButtonElements('Mow Lawn','20','mowLawnBtn')">Mow Lawn: $20</button>
-            <button class="btn" id="pullWeedsBtn" onclick="addButtonElements('Pull Weeds','30','pullWeedsBtn')">Pull Weeds: $30</button>
-          </section>
-      
-          <section id="invoiceHead">
-            <div>Task</div>
-            <div>Total</div>
-          </section>
+        <section>
+            <section id="btn-group">
+                <button class="btn" id="btn-mw" onclick="btnClick('.CW','btn-mw','10')">Wash Car: $10</button>
+                <button class="btn" id="btn-ml" onclick="btnClick('.ML','btn-ml','20')">Mow Lawn: $20</button>
+                <button class="btn" id="btn-pw" onclick="btnClick('.PW','btn-pw','30')">Pull Weeds: $30</button>
+            </section>
 
-          <div id="invoiceText">
-          </div>
-      
-          <hr>
-      
-          <section id="invoiceTail">
-            <div id="note">
-                <div>Notes</div>
-               <p>We accept cash, credit card, or PayPal</p>
+            <section id="invoiceHead">
+                <div>Task</div>
+                <div>Total</div>
+            </section>
+
+            <div class="invoiceText   CW">
+
+                <div class="name-and-remove">
+                    <h1>Car Wash</h1>
+                    <p><button class="removeBtn" id="rm-cw" onclick="removeBtn('.CW','btn-mw','10')">remove</button></p>
+                </div>
+
+                <div>$10</div>
+
             </div>
-            <div id="billamount">
-              <div>Total Amount</div>
-              <h1 id="amount">$0</h1>
+   
+            <div class="invoiceText   ML">
+
+                <div class="name-and-remove">
+                   <h1>Mow Lawn</h1>
+                   <p><button class="removeBtn" id="rm-ml" onclick="removeBtn('.ML','btn-ml','20')">remove</button></p>
+                </div>
+
+                <div>$20</div>
+
             </div>
-          </section>
-      
-          <button id="sendBtn"> <img src="Icon.png"> Send invoice</button>
-    </section>
+   
+            <div class="invoiceText   PW">
 
-    
-  </div>
+                <div class="name-and-remove">
+                   <h1>Pull Weeds</h1>
+                   <p><button class="removeBtn" id="rm-pw" onclick="removeBtn('.PW','btn-pw','30')">remove</button></p>
+                </div>
 
-  <script src="script.js"></script>
+                <div>$30</div>
+
+            </div>
+
+        </section>
+
+        <hr>
+        
+        <section>
+
+             <section id="invoiceTail">
+
+               <div id="note">
+                   <div>Notes</div>
+                  <p>We accept cash, credit card, or PayPal</p>
+               </div>
+
+               <div id="billamount">
+                 <div>Total Amount</div>
+                 <h1 id="amount">$0</h1>
+               </div>
+
+             </section>
+         
+             <button id="sendBtn"> <img src="Icon.png"> Send invoice</button>
+
+        </section>
+
+
+    </div>
+
+    <script src="script.js"></script>
 </body>
-
 </html>
