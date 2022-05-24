@@ -3,8 +3,17 @@
     text-align: center;
     font-family: 'Inter';
     font-style: normal;
+    
   }
-  
+
+  /** body**/
+
+  body{
+    background: #1F2937;
+  }
+
+  /** heading**/
+
   #rectangle{
     display:flex;
     flex-direction:column;
@@ -22,32 +31,14 @@
     line-height: 15px;
   }
 
+  /** buttons**/
+
   #btn-group{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     padding-top: 5vh;
-  }
-
-  #rectangleBottom{
-    background: #1F2937;
-    width: 100%;
-    height: 100%;
-  }
-  
-  #taskText{
-    display:flex;
-    justify-content:center;
-  }
-
-  #taskText p{
-    margin-left: 3vw;
-    color: #e0e0e0;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 15px;
-    
   }
 
   .btn{
@@ -64,6 +55,8 @@
     transform: translateY(4px);
   }
 
+  /** invoice Heading**/
+
   #invoiceHead{
     display: flex;
     flex-direction: row;
@@ -75,18 +68,50 @@
     padding-top: 2vh;
   }
 
-  #invoiceTextinside{
+  /** invoice text**/
 
+.invoiceText{
     display:grid;
     grid-template-columns: 1fr 1fr;
     font-weight: 700;
     line-height: 20px;
     color: #D5D4D8;
-    margin-top: 5vh; 
-  }
+    margin-top: 5vh;
+}
 
+.name-and-remove{
+    display:flex;
+    justify-content:center;
+}
 
-  #invoiceTail{
+.name-and-remove p{
+    margin-left: 3vw;
+    color: #e0e0e0;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.removeBtn{
+    background: #1F2937;
+    border: none;
+    color: #D5D4D8;
+}
+
+.removeBtn:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+/** line**/
+
+hr{
+    margin-top: 5vh;
+}
+
+/** notes and total**/
+
+#invoiceTail{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -97,22 +122,7 @@
     padding-top: 2vh;
   }
 
-  #removeBtn{
-    background: #1F2937;
-    border: none;
-    color: #D5D4D8;
-  }
-
-  #removeBtn:active {
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-  }
-
-  hr{
-    margin-top: 5vh;
-  }
-
-  #note{
+#note{
     display: flex;
     flex-direction: column; 
     align-items: flex-start;
@@ -120,18 +130,23 @@
     font-weight: 400;
     font-size: 12px;
     line-height: 15px;
-    margin-top: 5vh;
+    margin-bottom: 3vh;
   }
 
-  #sendBtn{
+/** send Invoice**/
+
+#sendBtn{
     height: 3rem;
     width: 30vw;
     background: #3A69D2;
     border-radius: 7px;
-    margin-top: 15vh;
-  }
+    margin: auto;
+}
 
-  #sendBtn:active {
+#sendBtn:active {
     box-shadow: 0 5px #666;
     transform: translateY(4px);
-  }
+}
+
+
+
